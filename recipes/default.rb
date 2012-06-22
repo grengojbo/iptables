@@ -44,8 +44,10 @@ when "ubuntu", "debian"
   end
 end
 
-iptables_rule "all"
-iptables_rule "ssh"
-iptables_rule "all_established"
-iptables_rule "limit_icmp"
-iptables_rule "login"
+if node["iptables"]["install_rules"]
+  iptables_rule "all"
+  iptables_rule "ssh"
+  iptables_rule "all_established"
+  iptables_rule "limit_icmp"
+  iptables_rule "login"
+end
