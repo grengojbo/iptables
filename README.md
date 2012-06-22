@@ -17,7 +17,7 @@ Requirements
 ## Platform:
 
 * Ubuntu/Debian
-* RHEL/CentOS
+* RHEL/CentOS/Oracle
 
 Recipes
 =======
