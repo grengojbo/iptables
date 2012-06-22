@@ -1,7 +1,7 @@
 # set default policies (allow any outbound, block inbound, restrict forwarding between interfaces)
--P INPUT DROP
--P FORWARD DROP
--P OUTPUT ACCEPT
+#-P INPUT DROP
+#-P FORWARD DROP
+#-P OUTPUT ACCEPT
 
 # allow all inbound traffic coming in on loopback and the internal/private interfaces.  IF YOU ENABLE eth0 or whatever device u have then this iptables is worthless cuz u #just allowed all traffic in
 #iptables -A INPUT -i eth0 -j ACCEPT
