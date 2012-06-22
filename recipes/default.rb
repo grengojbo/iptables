@@ -49,5 +49,13 @@ if node["iptables"]["install_rules"]
   iptables_rule "ssh"
   iptables_rule "all_established"
   iptables_rule "limit_icmp"
-  iptables_rule "login"
+  iptables_rule "logged"
+end
+
+if node.run_list.include?("role[freeswitch]")
+  iptables_rule "freeswitch"
+end
+
+if node.run_list.include?("role[opensips]")
+  iptables_rule "opensips"
 end
