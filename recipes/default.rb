@@ -44,6 +44,8 @@ when "ubuntu", "debian"
   end
 end
 
-
+iptables_rule "all"
+iptables_rule "ssh"
 iptables_rule "all_established"
-iptables_rule "all_icmp"
+iptables_rule "limit_icmp"
+iptables_rule "limit_icmp"

@@ -1,2 +1,2 @@
-# ICMP 
--A FWR -p icmp -j ACCEPT
+# ICMP
+-A INPUT -p icmp --icmp-type echo-request -m limit --limit 1/sec -j ACCEPT

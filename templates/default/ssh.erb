@@ -1,2 +1,2 @@
-# ICMP 
--A FWR -p icmp -j ACCEPT
+# allow inbound ssh connection on external/public interface
+iptables -A INPUT -p tcp --dport 22 --sport 1024:65535 -m state --state NEW,ESTABLISHED -j ACCEPT

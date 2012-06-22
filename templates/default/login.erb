@@ -1,2 +1,4 @@
-# ICMP 
--A FWR -p icmp -j ACCEPT
+# catch-all for end of rules
+# LOG and DENY other traffic to help identify additional filters required
+-A INPUT -m limit --limit 5/min -j LOG --log-prefix "iptables denied: " --log-level debug
+-A INPUT -j REJECT --reject-with icmp-host-prohibited
