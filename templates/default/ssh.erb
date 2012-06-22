@@ -1,2 +1,2 @@
 # allow inbound ssh connection on external/public interface
-iptables -A INPUT -p tcp --dport 22 --sport 1024:65535 -m state --state NEW,ESTABLISHED -j ACCEPT
+-A FWR -p tcp --dport 22 --sport 1024:65535 -m state --state NEW,ESTABLISHED -j ACCEPT
