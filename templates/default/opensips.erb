@@ -1,0 +1,8 @@
+# Allow RTP traffic
+-A FWR -p udp --dport 16384:32768 -j ACCEPT
+
+# Allow OpenSIPS traffic
+-A FWR -p tcp --dport 5060 -j ACCEPT
+-A FWR -p tcp --dport 7000 -j ACCEPT
+-A FWR -p udp --dport 5060 -j ACCEPT
+-A FWR -p udp --dport 7000 -j ACCEPT

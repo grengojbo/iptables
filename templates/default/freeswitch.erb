@@ -1,0 +1,9 @@
+# Allow RTP traffic
+-A FWR -p udp --dport 16384:32768 -j ACCEPT
+
+# Allow FreeSWITCH traffic
+-A FWR -p tcp --dport 5060 -j ACCEPT
+-A FWR -p udp --dport 5060 -j ACCEPT
+
+-A FWR -p tcp --dport 8021 -j ACCEPT
+-A FWR -p tcp --dport 8031 -j ACCEPT

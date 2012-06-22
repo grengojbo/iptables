@@ -17,7 +17,7 @@
 # limitations under the License.
 #
 
-package "iptables" 
+package "iptables"
 
 execute "rebuild-iptables" do
   command "/usr/sbin/rebuild-iptables"
