@@ -1,0 +1,9 @@
+# block packets coming in with invalid source ips
+-A FWR -s 10.0.0.0/8 -j DROP
+-A FWR -s 172.16.0.0/12 -j DROP
+-A FWR -s 192.168.0.0/16 -j DROP
+-A FWR -s 224.0.0.0/4 -j DROP
+-A FWR -s 240.0.0.0/5 -j DROP
+-A FWR -s 0.0.0.0/8 -j DROP
+-A FWR -s 169.254.0.0/16 -j DROP
+-A FWR -s 127.0.0.0/8 -j DROP
