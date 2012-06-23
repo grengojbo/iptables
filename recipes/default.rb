@@ -55,6 +55,10 @@ if node["iptables"]["rfc1918"]
   iptables_rule "rfc1918"
 end
 
+if node["iptables"]["block_whistle"]
+  iptables_rule "block_whistle"
+end
+
 if node["iptables"]["ssh"] == "all"
   iptables_rule "ssh"
 end

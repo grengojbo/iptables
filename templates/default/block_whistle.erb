@@ -1,0 +1,4 @@
+# block traffic coming into db unless ACCEPTED in INPUT above which 7server setup IP's are placed in home/office
+-A FWR -p tcp --dport 5984 -j DROP
+-A FWR -p tcp --dport 5986 -j DROP
+-A FWR -p tcp --dport 15984 -j DROP
