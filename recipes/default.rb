@@ -45,10 +45,14 @@ when "ubuntu", "debian"
 end
 
 if node["iptables"]["install_rules"]
-  iptables_rule "all"
+  iptables_rule "block"
+  iptables_rule "flood"
   iptables_rule "all_established"
   iptables_rule "limit_icmp"
-  iptables_rule "logged"
+end
+
+if node["iptables"]["rfc1918"]
+  iptables_rule "rfc1918"
 end
 
 if node["iptables"]["ssh"] == "all"
